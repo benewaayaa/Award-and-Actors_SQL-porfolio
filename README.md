@@ -1,7 +1,7 @@
 
 ABOUT THE DATASET 
 
-The dataset, powered by SQL, delves into "Epic TV Adventures," covering awards, characters, credits, episodes, persons, and votes. SQL queries provide key insights into award distribution, organizational achievements, individual contributions, and viewer engagement. This dataset is a valuable resource for making informed decisions to ensure the ongoing success of "Epic TV Adventures."
+The dataset, powered by SQL, delves into "TV Adventures," covering awards, characters, credits, episodes, persons, and votes. SQL queries provide key insights into award distribution, organizational achievements, individual contributions, and viewer engagement. This dataset is a valuable resource for making informed decisions to ensure the ongoing success of "TV Adventures."
 
 Insight to be Gained:
 
@@ -396,10 +396,7 @@ OUTPUT
 
 ![Screenshot](image/22.png)
 
-CODE
 
-
-SELECT [episode_id] [THE VARIOUS EPISODES],[votes] [NUMBER OF VOTES],[percent] [PERCENTAGE OF VOTES] FROM [dbo].[Vote] ORDER BY [percent] DESC
 
 QUESTION 22: 
 
@@ -452,3 +449,19 @@ SELECT TOP 1 [Organization] AS [ORGANIZATION], COUNT(*) AS [NUMBER OF AWARDS] FR
 OUTPUT
 
 ![Screenshot](image/24.png)
+
+
+QUESTION 25: 
+
+
+CALCULATE THE PERCENTAGE OF VOTES FOR EACH EPISODE IN THE "VOTE" TABLE.
+
+
+Analyzing vote percentages allows creators to focus on successful storytelling elements and understand audience preferences. This insight informs future content creation, enabling strategic decisions to maintain or improve viewer engagement, ensuring ongoing success for the series.
+
+CODE
+
+SELECT [episode_id] [THE VARIOUS EPISODES],[votes] [NUMBER OF VOTES],[percent] [PERCENTAGE OF VOTES] FROM [dbo].[Vote] ORDER BY [percent] DESC
+
+
+![Screenshot](image/27.png)
