@@ -1,8 +1,6 @@
 # "Actors and Awards: SQL Dataset Analysis
 
-##### ABOUT THE DATASET 
-
-
+ABOUT THE DATASET 
 
 The dataset, powered by SQL, delves into "Epic TV Adventures," covering awards, characters, credits, episodes, persons, and votes. SQL queries provide key insights into award distribution, organizational achievements, individual contributions, and viewer engagement. This dataset is a valuable resource for making informed decisions to ensure the ongoing success of "Epic TV Adventures."
 
@@ -47,7 +45,7 @@ CODE
 SELECT * FROM [dbo].[Award]
 
 OUTPUT
-## ![Screenshot](images/1.png)
+## ![Screenshot](image/1.png)
 
 QUESTION 2: 
 
@@ -60,7 +58,7 @@ CODE
 SELECT DISTINCT [Organization] AS [THE DIVERSE ORGANIZATION] FROM [dbo].[Award]
 
 OUTPUT
-![Screenshot](images/2.png)
+![Screenshot](image/2.png)
 
 QUESTION 3: 
 
@@ -72,7 +70,7 @@ CODE
 SELECT COUNT(*) AS [TOTAL NUMBER OF RECORDS] FROM [dbo].[Character_Award]
 
 OUTPUT
-![Screenshot](images/3.png)
+![Screenshot](image/3.png)
 
 QUESTION 4: 
 
@@ -86,7 +84,7 @@ CODE
 SELECT DISTINCT [role] AS [THE VARIOUS ROLES]FROM [dbo].[Credit]
 
 OUTPUT
-![Screenshot](images/3.png)
+![Screenshot](image/3.png)
 
 QUESTION 5: 
 
@@ -100,7 +98,7 @@ CODE
 SELECT MAX([birthdate]) AS [OLDEST DATE OF BIRTH],MIN([birthdate]) AS [YOUNGEST DATE OF BIRTH] FROM [dbo].[Person]
 
 OUTPUT
-![Screenshot](images/4.png)
+![Screenshot](image/4.png)
 
 QUESTION 6: 
 
@@ -115,7 +113,7 @@ SELECT TOP 5 [title] AS [TITLE],[episode_id] AS [EPISODE ID],[rating] AS [TOP RA
 ,[episode] AS [TOP EPISODE] FROM [dbo].[Episode] ORDER BY [rating] DESC
 
 OUTPUT
-![Screenshot](images/4.png)
+![Screenshot](image/4.png)
 
 QUESTION 7: 
 
@@ -129,7 +127,7 @@ CODE
 SELECT TOP 1 [Organization],COUNT(*) AS [NUMBER OF AWARDS] FROM [dbo].[Award] WHERE [Year] = '2014'GROUP BY [Organization] ORDER BY [NUMBER OF AWARDS] DESC;
 
 OUTPUT
- ![Screenshot](images/6.png)
+ ![Screenshot](image/6.png)
 
 QUESTION 8: 
 
@@ -144,7 +142,7 @@ SELECT
 AVG([votes]) AS [NUMBER OF VOTES PER EPISODE] FROM [dbo].[Episode]
 
 OUTPUT
-![Screenshot](images/7.png)
+![Screenshot](image/7.png)
 
 QUESTION 9: 
 
@@ -159,7 +157,7 @@ SELECT [episode_id] AS [EPISODE ID],[title] AS [TITLE],[votes] AS [NUMBER OF VOT
 FROM [dbo].[Episode] WHERE [votes] > 100 
 
 OUTPUT
-![Screenshot](images/8.png)
+![Screenshot](image/8.png)
 
 QUESTION 10: 
 
@@ -173,7 +171,7 @@ CODE
 SELECT COUNT(*) AS [NUMBER OF AWARDS WON],[Organization] AS [ORGANIZATIONS] FROM [dbo].[Award] GROUP BY  [Organization] ORDER BY [NUMBER OF AWARDS WON] DESC
 
 OUTPUT
-![Screenshot](images/9.png)
+![Screenshot](image/9.png)
 
 QUESTION 11: 
 
@@ -188,7 +186,7 @@ SELECT [name] AS [NAMES OF INDIVIDUALS WHO HAVE NOT BEEN CREDITED] FROM [dbo].[P
 FROM [dbo].[Credit]) ORDER BY [NAMES OF INDIVIDUALS WHO HAVE NOT BEEN CREDITED] 
 
 OUTPUT
-![Screenshot](images/10.png)
+![Screenshot](image/10.png)
 
 QUESTION 12: 
 
@@ -202,7 +200,7 @@ CODE
 SELECT ROUND(AVG([height_meters]),2)  AS [AVERAGE HEIGHT OF PERSONS] FROM [dbo].[Person]
 
 OUTPUT
-![Screenshot](images/11.png)
+![Screenshot](image/11.png)
 
 QUESTION 13: 
 
@@ -216,7 +214,7 @@ CODE
 SELECT TOP 1 [episode_id] AS [EPISODE ID],COUNT(*) AS [NUMBER OF KEYWORDS] FROM [dbo].[Keyword] GROUP BY [episode_id] ORDER BY [NUMBER OF KEYWORDS] DESC
 
 OUTPUT
-![Screenshot](images/12.png)
+![Screenshot](image/12.png)
 
 
 QUESTION 14:
@@ -230,7 +228,7 @@ CODE
 
 SELECT ROUND(AVG([height_meters]),2)  AS [AVERAGE HEIGHT OF PERSONS] FROM [dbo].[Person]
 
-![Screenshot](images/13.png)
+![Screenshot](image/13.png)
 
 QUESTION 15: 
 
@@ -247,7 +245,7 @@ WHERE [Person]IS NOT NULL AND NULLIF(RTRIM(LTRIM([Person])), '') IS NOT NULL
 GROUP BY [Person] HAVING COUNT(DISTINCT [Award_category]) > 1
 
 OUTPUT
-![Screenshot](images/14.png)
+![Screenshot](image/14.png)
 
 QUESTION 16: 
 
@@ -262,7 +260,7 @@ SELECT TOP 3 NULLIF(LTRIM(RTRIM([birth_place])), '') AS cleaned_birth_place,
 COUNT(*) AS birthplace_count FROM [dbo].[Person] WHERE [birth_place] IS NOT NULL AND NULLIF(LTRIM(RTRIM([birth_place])), '') IS NOT NULL GROUP BY NULLIF(LTRIM(RTRIM([birth_place])), '') ORDER BY birthplace_count DESC;
 
 OUTPUT
-![Screenshot](images/15.png)
+![Screenshot](image/15.png)
 
 QUESTION 17: 
 
@@ -278,7 +276,7 @@ COUNT(DISTINCT [episode_id]) AS [THE VARIOUS EPISODES] ,[votes] AS [NUMBER OF VO
 ,[percent] AS [PERCENTAGE OF VOTES] FROM [dbo].[Vote] GROUP BY [votes], [percent], [episode_id] ORDER BY [votes] DESC
 
 OUTPUT
-![Screenshot](images/16.png)
+![Screenshot](image/16.png)
 
 QUESTION 18: 
 
@@ -292,7 +290,7 @@ CODE
 SELECT TOP 3 NULLIF(LTRIM(RTRIM([birth_place])), '') AS cleaned_birth_place, COUNT(*) AS birthplace_count FROM [dbo].[Person] WHERE [birth_place] IS NOT NULL AND NULLIF(LTRIM(RTRIM([birth_place])), '') IS NOT NULL GROUP BY NULLIF(LTRIM(RTRIM([birth_place])), '') ORDER BY birthplace_count DESC;
 
 OUTPUT
-![Screenshot](images/17.png)
+![Screenshot](image/17.png)
 
 
 QUESTION 19: 
@@ -308,7 +306,7 @@ SELECT TOP 1 EP.[episode] AS [EPISODE], EP.[air_date] AS [DATE AIRED],
 EP.[title] AS [TITILE OF EPISODE], COUNT(KD.[keyword]) AS [EPISODE WITH THE MOST KEY PHRASE] FROM [dbo].[Keyword] KD JOIN [dbo].[Episode] EP ON KD.[episode_id] = EP.[episode_id] GROUP BY EP.[title], EP.[episode],EP.[air_date] ORDER BY [EPISODE WITH THE MOST KEY PHRASE] DESC
 
 OUTPUT
-![Screenshot](images/18.png)
+![Screenshot](image/18.png)
 
 QUESTION 20: 
 
@@ -322,7 +320,7 @@ CODE
 SELECT TOP 1 [Organization] AS [ORGANIZATION], COUNT(*) AS [NUMBER OF AWARDS] FROM [dbo].[Award] WHERE [Year] = '2014' GROUP BY [Organization] ORDER BY [NUMBER OF AWARDS] DESC;
 
 OUTPUT
-![Screenshot](images/19.png)
+![Screenshot](image/19.png)
 
 QUESTION 21: 
 
@@ -338,7 +336,7 @@ COUNT(DISTINCT [episode_id]) AS [THE VARIOUS EPISODES] ,[votes] AS [NUMBER OF VO
 ,[percent] AS [PERCENTAGE OF VOTES] FROM [dbo].[Vote] GROUP BY [votes], [percent], [episode_id] ORDER BY [votes] DESC
 
 OUTPUT
-![Screenshot](images/20.png)
+![Screenshot](image/20.png)
 
 CODE
 
@@ -358,7 +356,7 @@ SELECT
 AVG([votes]) AS [NUMBER OF VOTES PER EPISODE] FROM [dbo].[Episode]
 
 OUTPUT
-![Screenshot](images/21.png)
+![Screenshot](image/21.png)
 
 QUESTION 22: 
 
@@ -374,7 +372,7 @@ ED.[episode_id] AS [EPISODE_ID] FROM [dbo].[Credit] CT JOIN [dbo].[Episode] ED
 ON CT.[Episode_id] =ED.[episode_id] ORDER BY [CREDITED(TRUE OR FALSE)] DESC
 
 OUTPUT
-![Screenshot](images/22.png)
+![Screenshot](image/22.png)
 
 QUESTION 23: 
 
@@ -388,7 +386,7 @@ CODE
 SELECT TOP 1 [Organization] AS [ORGANIZATION], COUNT(*) AS [NUMBER OF AWARDS] FROM [dbo].[Award] WHERE [Year] = '2014' GROUP BY [Organization] ORDER BY [NUMBER OF AWARDS] DESC;
 
 OUTPUT
-![Screenshot](images/23.png)
+![Screenshot](image/23.png)
 
 QUESTION 24: 
 
@@ -402,7 +400,7 @@ CODE
 SELECT TOP 10 NULLIF(LTRIM(RTRIM([Person])),'') AS [INDIVIDUALS],COUNT(DISTINCT [Award]) AS [TOTAL NUMBER OF AWARDS] FROM[dbo].[Award] WHERE  NULLIF(LTRIM(RTRIM([Person])),'')  IS NOT NULL  AND  [Person] IS NOT NULL GROUP BY [Person] ORDER BY[TOTAL NUMBER OF AWARDS] DESC
 
 OUTPUT
-![Screenshot](images/24.png)
+![Screenshot](image/24.png)
 
 QUESTION 25: 
 
@@ -417,5 +415,5 @@ SELECT ED1.[episode_id] [EPISODE_ID], ED1.[title] [EPISODE TITLE], ED2.[episode_
 WHERE ED1.[episode_id] < ED2.[episode_id] ORDER BY ED1.[rating] DESC
 
 OUTPUT
-![Screenshot](images/25.png)
+![Screenshot](image/25.png)
 
