@@ -1,9 +1,6 @@
 # "Actors and Awards: SQL Dataset Analysis
 
-
-# STARS AND AWARDS: Unraveling 'Epic TV Adventures' Dataset Analysis"
-
-ABOUT THE DATASET 
+##### ABOUT THE DATASET 
 
 
 
