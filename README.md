@@ -1,4 +1,3 @@
-# "Actors and Awards: SQL Dataset Analysis
 
 ABOUT THE DATASET 
 
