@@ -84,7 +84,7 @@ CODE
 SELECT DISTINCT [role] AS [THE VARIOUS ROLES]FROM [dbo].[Credit]
 
 OUTPUT
-![Screenshot](image/4.png)
+![Screenshot](image/5.png)
 
 QUESTION 5: 
 
