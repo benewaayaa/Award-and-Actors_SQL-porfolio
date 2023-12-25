@@ -75,6 +75,7 @@ OUTPUT
 QUESTION 4: 
 
 
+
 DISPLAY THE DISTINCT ROLES FROM THE "CREDIT" TABLE.
 Displaying the distinct roles from the "Credit" table offers a clear view of the diverse roles associated with the series. This insight helps recognize the breadth of contributions from various individuals, providing an understanding of the collaborative efforts behind the scenes.
 
