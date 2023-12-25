@@ -452,23 +452,3 @@ SELECT TOP 1 [Organization] AS [ORGANIZATION], COUNT(*) AS [NUMBER OF AWARDS] FR
 OUTPUT
 
 ![Screenshot](image/24.png)
-
-
-QUESTION 25: 
-
-
-FIND THE ORGANIZATION WITH THE HIGHEST NUMBER OF AWARDS IN A SPECIFIC YEAR.
-
-
-Understanding the leading organization for a specific year guides strategic decisions and potential collaborations with industry leaders. This insight deepens awareness of the series' influence and standing, shaping future initiatives for continued success.
-
-CODE
-
-
-SELECT ED1.[episode_id] [EPISODE_ID], ED1.[title] [EPISODE TITLE], ED2.[episode_id] [EPISODE2_ID],ED2.[title] [TITLE2_ID],ED1.[rating] FROM [dbo].[Episode] ED1 JOIN [dbo].[Episode] ED2 ON ED1.[rating] = ED2.[rating] AND ED1.[episode_id] <> ED2.[episode_id]
-WHERE ED1.[episode_id] < ED2.[episode_id] ORDER BY ED1.[rating] DESC
-
-OUTPUT
-
-![Screenshot](image/24.png)
-
