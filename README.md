@@ -104,6 +104,8 @@ QUESTION 6:
 
 
 LIST THE TOP 5 EPISODES WITH THE HIGHEST RATINGS.
+
+
 Listing the top 5 episodes with the highest ratings offers insights into the most acclaimed and viewer-favored content. This information guides the understanding of audience preferences, enabling content creators to identify successful storytelling elements for future episodes
 
 CODE
