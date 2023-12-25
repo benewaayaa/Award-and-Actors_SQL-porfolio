@@ -64,6 +64,7 @@ QUESTION 3:
 COUNT THE TOTAL NUMBER OF RECORDS IN THE "CHARACTER_AWARD" TABLE.
 
 
+
 Counting the total number of records in the "Character_Award" table provides a straightforward metric of how many character awards exist. This insight gives a quantitative overview of the recognition received by characters in the series.
 
 CODE
@@ -72,6 +73,7 @@ SELECT COUNT(*) AS [TOTAL NUMBER OF RECORDS] FROM [dbo].[Character_Award]
 
 OUTPUT
 ![Screenshot](image/3.png)
+
 
 QUESTION 4: 
 
