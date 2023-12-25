@@ -1,7 +1,7 @@
 
 ABOUT THE DATASET 
 
-The dataset, powered by SQL, delves into "TV Adventures," covering awards, characters, credits, episodes, persons, and votes. SQL queries provide key insights into award distribution, organizational achievements, individual contributions, and viewer engagement. This dataset is a valuable resource for making informed decisions to ensure the ongoing success of "TV Adventures."
+The dataset, powered by SQL, utilises  TV Adventures covering awards, characters, credits, episodes, persons, and votes. SQL queries provide key insights into award distribution, organizational achievements, individual contributions, and viewer engagement. This dataset is a valuable resource for making informed decisions to ensure the ongoing success of TV Adventures.
 
 Insight to be Gained:
 
